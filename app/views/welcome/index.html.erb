@@ -17,6 +17,14 @@ function startChat() {
 </script>
 
 <style>
+html {
+  background: url(background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 #myiframe {
   height: 400px;
   position: fixed;
@@ -30,11 +38,6 @@ function startChat() {
   bottom: 10px;
 }
 </style>
-
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
 
 <iframe id='myiframe' name="myiframe" style="display: none;">
 </iframe>
