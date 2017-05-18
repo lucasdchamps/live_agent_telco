@@ -8,10 +8,10 @@ liveagent.init('https://d.la1-c2-par.salesforceliveagent.com/chat', '5720Y000000
   The time is now: <%= Time.now %>
 </p>
 
-<div id="liveagent_invite_button_5730Y000000Xd3y" style="display:none;">
-  <span style="cursor: pointer; width: 100px; height: 20px; padding: 5px;" onclick="liveagent.startChat('5730Y000000Xd3y')">Start Chat</span>
-  <span style="cursor: pointer; width: 100px; height: 20px; padding: 5px;" onclick="liveagent.rejectChat('5730Y000000Xd3y')">Reject Chat</span>
-</div>
+<a id="liveagent_button_online_5730Y000000Xd3y" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('5730Y000000Xd3y')">
+  <%= image_tag "salesforce.png" %>
+</a>
+<div id="liveagent_button_offline_5730Y000000Xd3y" style="display: none;"><!-- Offline Chat Content --></div>
 
 <script type="text/javascript">
   if (!window._laq) { window._laq = []; }
