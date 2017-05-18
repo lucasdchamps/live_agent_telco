@@ -8,7 +8,11 @@ liveagent.init('https://d.la1-c2-par.salesforceliveagent.com/chat', '5720Y000000
   The time is now: <%= Time.now %>
 </p>
 
-<a id="liveagent_button_online_5730Y000000Xd3y" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('5730Y000000Xd3y')">
+<iframe name="myiframe" style="height:300px;">
+ Here we show the chat window.
+</iframe>
+
+<a id="liveagent_button_online_5730Y000000Xd3y" href="javascript://Chat" style="display: none;" onclick="liveagent.startChatWithWindow('5730Y000000Xd3y', 'myiframe')">
   <%= image_tag "salesforce.png" %>
 </a>
 <div id="liveagent_button_offline_5730Y000000Xd3y" style="display: none;"><!-- Offline Chat Content --></div>
