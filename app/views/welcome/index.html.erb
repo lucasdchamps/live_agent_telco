@@ -11,7 +11,7 @@ function startChat() {
     return;
   }
 
-  liveagent.startChatWithWindow('5730Y000000Xd5C', 'myiframe');
+  liveagent.startChatWithWindow('5730Y000000Xd3y', 'myiframe');
   chatOpened = true;
 }
 </script>
@@ -34,7 +34,7 @@ html {
   background-color: white;
 }
 
-#liveagent_button_online_5730Y000000Xd5C {
+#liveagent_button_online_5730Y000000Xd3y {
   position: fixed;
   right: 30px;
   bottom: 40px;
@@ -44,15 +44,15 @@ html {
 <iframe id='myiframe' name="myiframe" style="display: none;">
 </iframe>
 
-<a id="liveagent_button_online_5730Y000000Xd5C" href="javascript://Chat" style="display: none;" onclick="startChat()">
+<a id="liveagent_button_online_5730Y000000Xd3y" href="javascript://Chat" style="display: none;" onclick="startChat()">
   <%= image_tag "salesforce.png" %>
 </a>
-<div id="liveagent_button_offline_5730Y000000Xd5C" style="display: none;"><!-- Offline Chat Content --></div>
+<div id="liveagent_button_offline_5730Y000000Xd3y" style="display: none;"><!-- Offline Chat Content --></div>
 
 <script type="text/javascript">
   if (!window._laq) { window._laq = []; }
   window._laq.push(function() {
-    liveagent.showWhenOnline('5730Y000000Xd5C', document.getElementById('liveagent_button_online_5730Y000000Xd5C'));
-    liveagent.showWhenOffline('5730Y000000Xd5C', document.getElementById('liveagent_button_offline_5730Y000000Xd5C'));
+    liveagent.showWhenOnline('5730Y000000Xd3y', document.getElementById('liveagent_button_online_5730Y000000Xd3y'));
+    liveagent.showWhenOffline('5730Y000000Xd3y', document.getElementById('liveagent_button_offline_5730Y000000Xd3y'));
   });
 </script>
