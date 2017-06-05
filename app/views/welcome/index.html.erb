@@ -17,14 +17,6 @@ function startChat() {
 </script>
 
 <style>
-html {
-  background: url('background.png') no-repeat center center fixed;
-  webkit-background-size: cover;
-  moz-background-size: cover;
-  o-background-size: cover;
-  background-size: cover;
-}
-
 #myiframe {
   height: 400px;
   position: fixed;
@@ -38,6 +30,26 @@ html {
   position: fixed;
   right: 30px;
   bottom: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  html {
+    background: url('bouygues-tablette.png') no-repeat center center fixed;
+    webkit-background-size: cover;
+    moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  html {
+    background: url('bouygues-desktop.png') no-repeat center center fixed;
+    webkit-background-size: cover;
+    moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+  }
 }
 </style>
 
