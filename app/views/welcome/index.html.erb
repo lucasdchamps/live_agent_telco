@@ -17,7 +17,7 @@ function startChat() {
 </script>
 
 <style>
-html, body { height: 100%; }
+html, body, #content { height: 100%; }
 
 #myiframe {
   height: 400px;
@@ -35,7 +35,7 @@ html, body { height: 100%; }
 }
 
 @media screen and (max-width: 992px) {
-  html {
+  #content {
     background: url('bouygues-tablette.png') no-repeat center center fixed;
     webkit-background-size: cover;
     moz-background-size: cover;
@@ -45,7 +45,7 @@ html, body { height: 100%; }
 }
 
 @media screen and (min-width: 993px) {
-  html {
+  #content {
     background: url('bouygues-desktop.png') no-repeat center center fixed;
     webkit-background-size: cover;
     moz-background-size: cover;
@@ -53,20 +53,47 @@ html, body { height: 100%; }
     background-size: cover;
   }
 }
+
+nav ul {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  list-style: none;
+}
+
+nav ul li { flex: 1 1 100%; }
+
+nav ul li a {
+  color: #666;
+  text-decoration: none;
+}
 </style>
 
-<iframe id='myiframe' name="myiframe" style="display: none;">
-</iframe>
+<nav>
+  <ul>
+    <li><a href="http://bouygues2.herokuapp.com" title="Bouygues">Bouygues</a></li>
+    <li><a href="http://sephorabot2.herokuapp.com" title="Sephora">Sephora</a></li>
+    <li><a href="http://routingbot2.herokuapp.com" title="SFR">SFR</a></li>
+    <li><a href="http://axa-demo2.herokuapp.com" title="Axa">Axa</a></li>
+    <li><a href="http://sodexobot2.herokuapp.com" title="Sodexo">Sodexo</a></li>
+    <li><a href="http://laposte-demo2.herokuapp.com" title="LaPoste">LaPoste</a></li>
+  </ul>
+</nav>
 
-<a id="liveagent_button_online_5730Y000000Xd5C" href="javascript://Chat" style="display: none;" onclick="startChat()">
-  <%= image_tag "salesforce.png" %>
-</a>
-<div id="liveagent_button_offline_5730Y000000Xd5C" style="display: none;"><!-- Offline Chat Content --></div>
+<div id="content">
+  <iframe id='myiframe' name="myiframe" style="display: none;">
+  </iframe>
 
-<script type="text/javascript">
-  if (!window._laq) { window._laq = []; }
-  window._laq.push(function() {
-    liveagent.showWhenOnline('5730Y000000Xd5C', document.getElementById('liveagent_button_online_5730Y000000Xd5C'));
-    liveagent.showWhenOffline('5730Y000000Xd5C', document.getElementById('liveagent_button_offline_5730Y000000Xd5C'));
-  });
-</script>
+  <a id="liveagent_button_online_5730Y000000Xd5C" href="javascript://Chat" style="display: none;" onclick="startChat()">
+    <%= image_tag "salesforce.png" %>
+  </a>
+  <div id="liveagent_button_offline_5730Y000000Xd5C" style="display: none;"><!-- Offline Chat Content --></div>
+
+  <script type="text/javascript">
+    if (!window._laq) { window._laq = []; }
+    window._laq.push(function() {
+      liveagent.showWhenOnline('5730Y000000Xd5C', document.getElementById('liveagent_button_online_5730Y000000Xd5C'));
+      liveagent.showWhenOffline('5730Y000000Xd5C', document.getElementById('liveagent_button_offline_5730Y000000Xd5C'));
+    });
+  </script>
+</div>
